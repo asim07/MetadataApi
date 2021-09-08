@@ -131,6 +131,11 @@ def getTokenData(token_id):
     return result
 
 
+@app.route("/")
+def basic():
+    return jsonify({"res": "invalid url"})
+
+
 @app.route("/api/creature/<token_id>")
 def creature(token_id):
     if checkToken(token_id):
